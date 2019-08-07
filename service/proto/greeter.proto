@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package go.micro.srv.greeter;
+
+service GretterService {
+    rpc Say(Request) returns (Response);
+}
+
+message Request {
+    string name = 1;
+}
+
+message Response {
+    string message = 1;
+}
